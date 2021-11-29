@@ -1,6 +1,6 @@
 {
   "name": "salesforce-app",
-  "private": truee,
+  "private": true,
   "version": "1.0.0",
   "description": "Salesforce App",
   "scripts": {
