@@ -11,16 +11,14 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 export default class CarVoiture extends LightningElement {
     @api recordId;
     @api objectApiName= OBJECT_NAME;
-    fields = [CARBURANT_FIELD, MARQUE_FIELD, PUISSANCE_FIELD, COULEUR_FIELD, IMMATRICULATION_FIELD, NAME_FIELD];
-    handleSave(event){
-        this.showToast();
-    }
-    showToast() {
-        const event = new ShowToastEvent({
+    @api fields = [CARBURANT_FIELD, MARQUE_FIELD, PUISSANCE_FIELD, COULEUR_FIELD, IMMATRICULATION_FIELD, NAME_FIELD];
+    handleSuccess(event){
+        const toastEvent = new ShowToastEvent({
             title: 'Voiture ajoutée',
             message:
-                'La '+ MARQUE_FIELD + ' a été ajouté avvec succès',
+                'La '+ event.detail.id + ' a été ajouté avec succès',
         });
-        this.dispatchEvent(event);
+        this.dispatchEvent(toastEvent);
     }
+    
 }

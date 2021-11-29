@@ -1,10 +1,10 @@
 <template>
-    <lightning-card  variant="Narrow"  title="Hello" icon-name="custom:custom31">
+    <lightning-card  variant="Narrow"  title="Ajout d'un nouveau véhicule" icon-name="custom:custom31">
         <lightning-record-form 
         object-api-name={objectApiName}
         record-id = {recordId}
         fields={fields}
-        onsuccess={handleSave}>
+        onsuccess={handleSuccess}>
         <!--lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
         <p class="slds-p-horizontal_small">{voiture.Name}</p>
         <p class="slds-p-horizontal_small">{voiture.Marque}</p>
